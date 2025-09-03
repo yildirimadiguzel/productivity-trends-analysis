@@ -10,6 +10,7 @@ This project analyzes the relationship between contributor experience and their 
 2. Who are the most impactful contributors over time?
 3. What patterns emerge in contributor retention and productivity?
 4. How does impact per year change as contributors gain more experience?
+5. How can we accurately measure and improve software engineering efficiency in large-scale development teams?
 
 ## Data Sources
 
@@ -19,6 +20,8 @@ This project analyzes the relationship between contributor experience and their 
   - Total commits, files changed, additions, and deletions
   - Years of experience in the repository
   - Active contribution periods
+- Internal engineering metrics from platforms such as Jira (issue tracking), GitHub/GitLab (code commits, pull requests, and code review times), and CI/CD pipelines
+- Industry benchmarks from public datasets like the GitHub Octoverse Report
 
 ### Data Collection
 
@@ -48,11 +51,17 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
    - Correlation between experience and impact
    - Regression analysis for predictive modeling
    - Cohort analysis of contributor groups
+   - Descriptive and inferential statistics to identify trends and bottlenecks
+   - Time-series analysis for productivity trends
 
 4. **Visualization**
    - Time-series analysis of contribution patterns
    - Experience vs. impact scatter plots
    - Contributor retention curves
+   - Stakeholder-ready dashboards
+
+5. **Data Processing**
+   - Data cleaning and integration from multiple systems
 
 ## Project Structure
 
@@ -72,6 +81,9 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
 - Identification of high-impact contributors
 - Patterns in contributor retention and churn
 - Effectiveness of experience as a predictor of productivity
+- Ranked list of key factors that most influence engineering throughput and quality
+- Actionable framework of engineering efficiency KPIs (e.g., lead time, cycle time, defect density)
+- Recommendations for targeted process improvements, such as reducing review bottlenecks or optimizing sprint scope
 
 ## Why This Analysis Matters
 
@@ -82,4 +94,6 @@ Understanding the relationship between contributor experience and impact helps o
 - Develop more effective onboarding strategies for new team members
 - Create targeted retention programs for high-impact contributors
 
-This analysis provides data-driven insights that both technical and non-technical leaders can use to improve team productivity and code quality.
+Software engineering is expensive, and inefficiency is even pricier. If we can pinpoint what slows teams down and what boosts their output, organizations can deliver features faster, improve quality, and reduce costs without simply hiring more people. Leaving this question unanswered means companies may waste time and money on "productivity" metrics that look appealing but don't actually help deliver better software.
+
+By answering these questions, decision-makers will acquire a clear picture of where their teams truly excel, where they struggle, and which changes will deliver the most impact. This analysis provides data-driven insights that both technical and non-technical leaders can use to confidently implement improvements to team productivity and code quality.
