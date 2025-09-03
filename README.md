@@ -69,7 +69,6 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
   - `git_commits.csv` - Raw commit history
   - `git_numstat.csv` - Detailed statistics about each commit
   - `contributor_impact_dataset.csv` - Processed dataset with impact metrics
-  - `branches.json` - Repository branch information
 
 - `contributor_impact_analysis.ipynb` - Main analysis notebook examining overall contributor patterns
 - `contributor_experience_vs_impact.ipynb` - Focused analysis on experience-impact relationship
