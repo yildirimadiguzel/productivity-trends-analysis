@@ -1,0 +1,85 @@
+# Contributor Impact and Experience Analysis
+
+## Project Overview
+
+This project analyzes the relationship between contributor experience and their impact on software repositories, using the [Spring Boot](https://github.com/spring-projects/spring-boot) open source project as a case study. By examining Git commit history and contribution patterns, we aim to understand how developer experience correlates with productivity and code impact over time.
+
+## Research Questions
+
+1. How does contributor experience (measured in years) correlate with their impact on the codebase?
+2. Who are the most impactful contributors over time?
+3. What patterns emerge in contributor retention and productivity?
+4. How does impact per year change as contributors gain more experience?
+
+## Data Sources
+
+- Git repository commit history from [Spring Boot](https://github.com/spring-projects/spring-boot), an open source project with publicly available contribution data
+- Contributor statistics including:
+  - First and last contribution dates
+  - Total commits, files changed, additions, and deletions
+  - Years of experience in the repository
+  - Active contribution periods
+
+### Data Collection
+
+The data was collected using the following Git commands:
+
+```bash
+# Extract commit history with numstat information (additions/deletions per file)
+git log --numstat --date=iso-strict --pretty=format:'---%n%H##%ad##%an##%ae' > data/git_numstat.csv
+
+# Extract commit metadata (hash, date, author, email, subject)
+git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_commits.csv
+```
+
+## Analysis Techniques
+
+1. **Contributor Experience Metrics**
+   - Years since first commit
+   - Active contribution periods
+   - Consistency of contributions
+
+2. **Impact Measurement**
+   - Code volume metrics (additions, deletions, files changed)
+   - Weighted impact scoring
+   - Impact per year of experience
+
+3. **Statistical Analysis**
+   - Correlation between experience and impact
+   - Regression analysis for predictive modeling
+   - Cohort analysis of contributor groups
+
+4. **Visualization**
+   - Time-series analysis of contribution patterns
+   - Experience vs. impact scatter plots
+   - Contributor retention curves
+
+## Project Structure
+
+- `data/` - Contains raw and processed Git data
+  - `git_commits.csv` - Raw commit history
+  - `git_numstat.csv` - Detailed statistics about each commit
+  - `contributor_impact_dataset.csv` - Processed dataset with impact metrics
+  - `branches.json` - Repository branch information
+
+- `contributor_impact_analysis.ipynb` - Main analysis notebook examining overall contributor patterns
+- `contributor_experience_vs_impact.ipynb` - Focused analysis on experience-impact relationship
+- `plots/` - Generated visualizations and charts
+
+## Key Insights
+
+- Correlation between years of experience and code impact
+- Identification of high-impact contributors
+- Patterns in contributor retention and churn
+- Effectiveness of experience as a predictor of productivity
+
+## Why This Analysis Matters
+
+Understanding the relationship between contributor experience and impact helps organizations:
+
+- Better allocate resources and mentorship
+- Identify potential knowledge gaps when experienced contributors leave
+- Develop more effective onboarding strategies for new team members
+- Create targeted retention programs for high-impact contributors
+
+This analysis provides data-driven insights that both technical and non-technical leaders can use to improve team productivity and code quality.
