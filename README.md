@@ -49,19 +49,29 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
 
 3. **Statistical Analysis**
    - Correlation between experience and impact
-   - Regression analysis for predictive modeling
    - Cohort analysis of contributor groups
    - Descriptive and inferential statistics to identify trends and bottlenecks
    - Time-series analysis for productivity trends
 
-4. **Visualization**
+4. **Predictive Modeling**
+   - Regression models to predict contributor impact metrics
+   - Classification models to categorize contributors by impact level
+   - Feature importance analysis to identify key predictors
+   - Model evaluation and performance comparison
+   - Clustering analysis to identify natural contributor patterns
+
+5. **Visualization**
    - Time-series analysis of contribution patterns
    - Experience vs. impact scatter plots
    - Contributor retention curves
+   - Model performance and feature importance charts
+   - Confusion matrices for classification models
+   - Cluster visualization
    - Stakeholder-ready dashboards
 
-5. **Data Processing**
+6. **Data Processing**
    - Data cleaning and integration from multiple systems
+   - Feature engineering for predictive modeling
 
 ## Project Structure
 
@@ -73,7 +83,10 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
 - `contributor_data_eda.ipynb` - Exploratory Data Analysis notebook for initial data examination and insights
 - `contributor_impact_analysis.ipynb` - Main analysis notebook examining overall contributor patterns
 - `contributor_experience_vs_impact.ipynb` - Focused analysis on experience-impact relationship
-- `plots/` - Generated visualizations and charts
+- `contributor_predictive_modeling.ipynb` - Implementation of predictive models for contributor impact
+- `contributor_predictive_models.py` - Python module with machine learning models and utilities
+- `contributor_predictive_modeling_demo.ipynb` - Demonstration of predictive modeling techniques
+- `plots/` - Generated visualizations and charts including model performance and feature importance
 
 ## Key Insights
 
@@ -84,6 +97,10 @@ git log --date=iso-strict --pretty=format:'%H##%ad##%an##%ae##%s' > data/git_com
 - Ranked list of key factors that most influence engineering throughput and quality
 - Actionable framework of engineering efficiency KPIs (e.g., lead time, cycle time, defect density)
 - Recommendations for targeted process improvements, such as reducing review bottlenecks or optimizing sprint scope
+- Predictive models that can forecast contributor impact based on activity metrics
+- Classification of contributors into impact categories with high accuracy
+- Identification of distinct contributor clusters with unique behavior patterns
+- Key predictors of contributor impact (total changes, total commits, active years)
 
 ## Why This Analysis Matters
 
